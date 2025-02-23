@@ -17,7 +17,6 @@ body {
     background-color: #FFF;
     margin: 0px auto;
     position: relative;
-    font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -207,7 +206,7 @@ h5,
 h6 {
     text-transform: uppercase;
     margin: 0 0 30px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
 }
@@ -428,11 +427,6 @@ a.active {
 }
 
 
-/* MIN-WIDTH: "If [device width] is GREATER than or equal to [992px], then do {...}"*/
-
-
-/* MAX-WIDTH: "If [device width] is LESS than or equal to [992px], then do {...}"*/
-
 @media only screen and (min-width: 768px) {
     .container {
         width: 95%;
@@ -446,9 +440,7 @@ a.active {
 }
 
 @media (min-width: 768px) {
-    /*.container {
-      width: 900px;
-    }*/
+
     .navbar-custom {
         padding: 15px 0;
         border-bottom: 0;
@@ -1277,7 +1269,7 @@ a.resume-btn:active {
 }
 
 #portfolio .portfolio-row {
-    margin-left: 50px;
+    margin-left: 20px;
     margin-right: 50px;
 }
 
@@ -1329,9 +1321,15 @@ a.resume-btn:active {
     overflow: hidden;
 }
 
+#portfolio .portfolio-img {
+    width: 400px;  
+    height: 300px;
+}
+
 #portfolio .portfolio-item img {
     max-width: 100%;
     width: 100%;
+    object-fit: cover;
     opacity: 1.0;
     transition: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out;
